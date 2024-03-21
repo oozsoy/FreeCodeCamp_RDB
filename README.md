@@ -1,6 +1,11 @@
 # Relational Databases Projects @FreeCodeCamp
 
-This repository contains .sql dump files and bash scripts to automatically pipeline the contents of .csv files to a certain database
+This repository (so far) contains three projects that is included in the FreeCodeCamp's Relational Database course including two projects required to obtain the certificate of the program:
+
+1. Celestial Bodies Database (Certification Project)
+2. Worldcup Database (Certification Project)
+3. Bike Rental Shop Database (Tutorial Project)
+
 
 ## Celestial Bodies Database
 
@@ -10,6 +15,9 @@ Contains the Celestial Bodies database for various planets within the solar syst
 
 which can be used to rebuild the Celestial Bodies database by entering `psql -U postgres < universe.sql` in a terminal where the .sql file is.
 
+### References
+[Nasa Exoplanets Database](https://exoplanets.nasa.gov/discovery/exoplanet-catalog/)
+
 ## World Cup Database
 
 Contains `worldcup.sql` dump file (generated via `pg_dump` CLI utility @ `psql`) for the Worldcup DB that have two tables `teams` (national teams that competed in the last 16 round and beyond in the WC 2014 and 2018) and `games` (each game in the last 16 round and beyond in the WC 2014 and 2018). 
@@ -17,3 +25,10 @@ Contains `worldcup.sql` dump file (generated via `pg_dump` CLI utility @ `psql`)
 The DB is populated by pipelining the contents of the `games.csv` file using the bash script `insert_data.sh`. The resulting DB is then queried using `queries.sh` to get more insight about the data.
 
 Worldcup DB can be rebuild by entering `psql -U postgres < worldcup.sql` in a terminal where the .sql file is.
+
+## Bike Rental Shop Database
+
+Contains:
+
+- `bike-shop.sql` dump file that can be used to re-build the database which include three tables `bikes` (list of bikes depending on their `type`, `size` and `availability`), `rentals` (the log of bike rentals with `rental_id`,`customer_id`,`bike_id`,`date_rented`, `date_returned`) and `customers` (with `customer_id`, `phone`, `name`) tables.
+- A bash script `bike-shop.sh` that both interacts with the bike shop database and the user to mimic the bike rental and return process.  
