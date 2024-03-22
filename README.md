@@ -1,10 +1,11 @@
 # Relational Databases Projects @FreeCodeCamp
 
-This repository (so far) contains three projects that is included in the FreeCodeCamp's Relational Database course including two projects required to obtain the certificate of the program:
+This repository (so far) contains three projects that is included in the FreeCodeCamp's [Relational Database](https://www.freecodecamp.org/learn/relational-database/) course including two projects required to obtain the certificate of the program:
 
 1. Celestial Bodies Database (Certification Project)
 2. Worldcup Database (Certification Project)
-3. Bike Rental Shop Database (Tutorial Project)
+3. Bike Rental Shop (Tutorial Project)
+4. Salon Appointment Scheduler (Certification Project)
 
 
 ## Celestial Bodies Database
@@ -26,9 +27,18 @@ The DB is populated by pipelining the contents of the `games.csv` file using the
 
 Worldcup DB can be rebuild by entering `psql -U postgres < worldcup.sql` in a terminal where the .sql file is.
 
-## Bike Rental Shop Database
+## Bike Rental Shop
 
 Contains:
 
-- `bike-shop.sql` dump file that can be used to re-build the database which include three tables `bikes` (list of bikes depending on their `type`, `size` and `availability`), `rentals` (the log of bike rentals with `rental_id`,`customer_id`,`bike_id`,`date_rented`, `date_returned`) and `customers` (with `customer_id`, `phone`, `name`) tables.
-- A bash script `bike-shop.sh` that both interacts with the bike shop database and the user to mimic the bike rental and return process.  
+- `bike-shop.sql` dump file that can be used to re-build the bikeshop database which include three tables `bikes` (list of bikes depending on their `type`, `size` and `availability`), `rentals` (the log of bike rentals with `rental_id`,`customer_id`,`bike_id`,`date_rented`, `date_returned`) and `customers` (with `customer_id`, `phone`, `name`) tables.
+- A bash script `bike-shop.sh` that both interacts with the bike shop database and the user to mimic the bike rental and return process.
+
+## Salon Appointment Scheduler
+
+Contains:
+
+- `salon.sql` dump file that can be used to re-build the salon database which include three tables `services` (list of services offered by the salon shop with their `name`,`type` and `service_id`), `customers` (table with information on the customers of the salon including their UNIQUE `phone` number, `name` and `customer_id`) and `appointments` which keep track of the appointment schedule by keeping the log of `appointment_id`, `customer_id` , `service_id` and `time`.
+- A bash script `salon.sh` that interacts with the salon database and the user to make appointments for services offered in the salon shop.
+
+*Further possible improvements: Adding a module to make rescheduling of already existing appointments*
