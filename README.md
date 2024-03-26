@@ -6,7 +6,7 @@ This repository (so far) contains three projects that is included in the FreeCod
 2. Worldcup Database (Certification Project)
 3. Bike Rental Shop (Tutorial Project)
 4. Salon Appointment Scheduler (Certification Project)
-
+5. Periodic Table Database (Certification Project)
 
 ## Celestial Bodies Database
 
@@ -42,3 +42,14 @@ Contains:
 - A bash script `salon.sh` that interacts with the salon database and the user to make appointments for services offered in the salon shop.
 
 *Further possible improvements: Adding a module to make rescheduling of already existing appointments*
+
+## Periodic Table Database 
+
+Contains:
+
+- `periodic_table.sql` dump file that can be used to re-build the periodic table database which include three tables `elements` (list of some elements with their `atomic_number`, `name` and `symbol`), `properties` (table with information on the elements including their `atomic_number`, `atomic_mass`, `melting_point_celsius`, `boiling_point_celsius`, `type_id` which will be used to relate to the `types` table) and `types` table accounting for all possible types  (metallic,nonmetallic,metalloid) of an element with a corresponding `type_id`.
+  
+- A bash script `element.sh` that interacts with the database to return information about an element provided that `name`,`symbol` or `atomic_number` of the element is provided as an argument.
+
+  *Further possible improvements: Add more interesting elements/properties to make a more complete periodic table database*
+
