@@ -1,4 +1,4 @@
-# Relational Databases Projects @FreeCodeCamp
+# Relational Databases Projects
 
 This repository (so far) contains three projects that is included in the FreeCodeCamp's [Relational Database](https://www.freecodecamp.org/learn/relational-database/) course including two projects required to obtain the certificate of the program:
 
